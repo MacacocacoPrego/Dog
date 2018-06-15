@@ -1,22 +1,24 @@
 package entidades;
 
 public class Dogsons {
-	int idDog;
+	
+	int id;
+	int idDono;
 	String raça;
 	boolean sexo;
 	int idade;
-	Dono Dono;
-	public Dono getDono() {
-		return Dono;
+	
+	public int getId() {
+		return id;
 	}
-	public void setDono(Dono dono) {
-		Dono = dono;
+	public void setId(int id) {
+		this.id = id;
 	}
-	public int getIdDog() {
-		return idDog;
+	public int getIdDono() {
+		return idDono;
 	}
-	public void setIdDog(int idDog) {
-		this.idDog = idDog;
+	public void setIdDono(int idDono) {
+		this.idDono = idDono;
 	}
 	public String getRaça() {
 		return raça;
@@ -36,6 +38,5 @@ public class Dogsons {
 	public void setIdade(int idade) {
 		this.idade = idade;
 	}
-	
 
 }

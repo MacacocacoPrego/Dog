@@ -1,10 +1,19 @@
 package entidades;
 
 public class Dono {
+	
+	int id;
 	int cpf;
 	String name;
 	int idade;
 	int numeroCel;
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
 	public int getCpf() {
 		return cpf;
 	}
