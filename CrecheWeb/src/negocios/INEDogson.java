@@ -10,5 +10,5 @@ public interface INEDogson {
 	Dogsons get(int id);
 	
 	List<Dogsons> list();
-	List<Dogsons> listByDono();
+	List<Dogsons> listByDono(int id);
 }

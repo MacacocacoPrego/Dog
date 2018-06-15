@@ -41,7 +41,7 @@ public class DDogsons implements INDDogsons {
                 statement.close();
             } else {
                 // Cria o preparedStatement
-                String sql = "UPDATE USUARIO SET ID_DONO = ?, RACA = ?, SEXO = ?, IDADE = ?, NOME = ?, PESO = ?, CASTRADO = ? WHERE ID = ?";
+                String sql = "UPDATE DOGSONS SET ID_DONO = ?, RACA = ?, SEXO = ?, IDADE = ?, NOME = ?, PESO = ?, CASTRADO = ? WHERE ID = ?";
                 PreparedStatement statement = con.prepareStatement(sql);
 
                 // Preenche os valores
