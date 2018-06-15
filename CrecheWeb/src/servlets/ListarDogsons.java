@@ -1,0 +1,39 @@
+package servlets;
+
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import negocios.NEDogsons;
+
+/**
+ * Servlet implementation class ListarDogsons
+ */
+@WebServlet("/ListarDogsons")
+public class ListarDogsons extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+	
+	private NEDogsons dogsons;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public ListarDogsons() {
+        super();
+        dogsons = new NEDogsons();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		request.setAttribute("dogsons", dogsons.list());
+		request.getRequestDispatcher("listarDogsons.jsp").forward(request, response);
+	}
+
+}

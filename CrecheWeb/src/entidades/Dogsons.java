@@ -5,17 +5,18 @@ public class Dogsons {
 	int id;
 	int idDono;
 	String raca;
-	String peso;
+	float peso;
 	boolean castrado;
 	boolean sexo;
 	int idade;
 	String nome;
+	String nomeDono;
 	
 	public Dogsons() {
 		
 	}
 	
-	public Dogsons(int idDono, String raca, boolean sexo, int idade, String nome, String peso, boolean castrado) {
+	public Dogsons(int idDono, String raca, boolean sexo, int idade, String nome, float peso, boolean castrado) {
 		this.idDono = idDono;
 		this.raca = raca;
 		this.sexo = sexo;
@@ -25,6 +26,11 @@ public class Dogsons {
 		this.castrado = castrado;
 	}
 	
+	public Dogsons(int id, int idDono, String raca, boolean sexo, int idade, String nome, float peso, boolean castrado) {
+		this(idDono, raca, sexo, idade, nome, peso, castrado);
+		this.id = id;
+	}
+		
 	public int getId() {
 		return id;
 	}
@@ -62,11 +68,11 @@ public class Dogsons {
 		this.nome = nome;
 	}
 
-	public String getPeso() {
+	public float getPeso() {
 		return peso;
 	}
 
-	public void setPeso(String peso) {
+	public void setPeso(float peso) {
 		this.peso = peso;
 	}
 
@@ -77,6 +83,16 @@ public class Dogsons {
 	public void setCastrado(boolean castrado) {
 		this.castrado = castrado;
 	}
+
+	public String getNomeDono() {
+		return nomeDono;
+	}
+
+	public void setNomeDono(String nomeDono) {
+		this.nomeDono = nomeDono;
+	}
+	
+	
 	
 
 }

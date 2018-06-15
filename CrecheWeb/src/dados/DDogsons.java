@@ -28,7 +28,7 @@ public class DDogsons implements INDDogsons {
                 statement.setBoolean(3, d.isSexo());
                 statement.setInt(4, d.getIdade());
                 statement.setString(5, d.getNome());
-                statement.setString(6, d.getPeso());
+                statement.setFloat(6, d.getPeso());
                 statement.setBoolean(7, d.isCastrado());
 
                 //Executa
@@ -50,7 +50,7 @@ public class DDogsons implements INDDogsons {
                 statement.setBoolean(3, d.isSexo());
                 statement.setInt(4, d.getIdade());
                 statement.setString(5, d.getNome());
-                statement.setString(6, d.getPeso());
+                statement.setFloat(6, d.getPeso());
                 statement.setBoolean(7, d.isCastrado());
                 statement.setInt(8, d.getId());
 
@@ -118,7 +118,7 @@ public class DDogsons implements INDDogsons {
             Connection con = Conexao.getConnection();
 
             // Cria o preparedStatement
-            String sql = "SELECT * FROM DOGSONS";
+            String sql = "SELECT DONO.NOME \"nomeDono\", DOGSONS.* FROM DONO INNER JOIN DOGSONS ON DONO.ID = DOGSONS.ID_DONO";
             PreparedStatement statement = con.prepareStatement(sql);
 
             // Executa
@@ -165,11 +165,12 @@ public class DDogsons implements INDDogsons {
 		d.setId(r.getInt("id"));
 		d.setIdDono(r.getInt("id_dono"));
 		d.setRaca(r.getString("raca"));
-		d.setPeso(r.getString("peso"));
+		d.setPeso(r.getFloat("peso"));
 		d.setCastrado(r.getBoolean("castrado"));
 		d.setSexo(r.getBoolean("sexo"));
 		d.setIdade(r.getInt("idade"));
 		d.setNome(r.getString("nome"));
+		d.setNomeDono(r.getString("nomeDono"));
 		return d;
 	}
 	
