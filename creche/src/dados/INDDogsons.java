@@ -5,10 +5,12 @@ import java.util.List;
 import entidades.Dogsons;
 
 public interface INDDogsons {
-	String cadastrar(Dogsons d);
-	String deletar(int id);
-	String Serviço();
+	
+	int salvar(Dogsons d);
+	void deletar(int id);
+	Dogsons get(int id);
 	
 	List<Dogsons> list();
+	List<Dogsons> listByDono();
 
 }

@@ -5,9 +5,10 @@ import java.util.List;
 
 public interface INEDogson {
 	
-	String cadastrar();
-	String deletar();
-	String Serviço();
+	int salvar(Dogsons d);
+	void deletar(int id);
+	Dogsons get(int id);
 	
 	List<Dogsons> list();
+	List<Dogsons> listByDono();
 }

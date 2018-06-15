@@ -1,16 +1,15 @@
 package dados;
 
 import java.util.List;
-
-import entidades.Dogsons;
 import entidades.Hospedar;
 
 public interface INDHospedar {
 	
-	int hospedar(Dogsons dog);
-	void deletar(Dogsons dog);
-	int salvar(Dogsons dog);
+	int salvar(Hospedar h);
+	void finalizar(int id);
+	void deletar(int id);
+	Hospedar get(int id);
+
 	List<Hospedar>list();
 	
-
 }

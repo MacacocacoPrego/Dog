@@ -1,18 +1,15 @@
 package negocios;
-import java.util.List;
 
-import entidades.Dogsons;
+import java.util.List;
 import entidades.Hospedar;
 
 public interface INEHospedar {
 	
-	
+	int salvar(Hospedar h);
+	void finalizar(int id);
+	void deletar(int id);
+	Hospedar get(int id);
 
-	int hospedar();
-	void deletar(Dogsons dog);
-	void cancelar(Dogsons dog);
-	int salvar(Dogsons dog);
 	List<Hospedar>list();
-	
 
 }
