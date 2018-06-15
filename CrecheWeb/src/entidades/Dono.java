@@ -3,10 +3,21 @@ package entidades;
 public class Dono {
 	
 	int id;
-	int cpf;
-	String name;
+	String cpf;
+	String nome;
 	int idade;
-	int numeroCel;
+	String telefone;
+	
+	public Dono() {
+		
+	}
+	
+	public Dono(String cpf, String nome, int idade, String telefone) {
+		this.cpf = cpf;
+		this.nome = nome;
+		this.idade = idade;
+		this.telefone = telefone;
+	}
 	
 	public int getId() {
 		return id;
@@ -14,17 +25,17 @@ public class Dono {
 	public void setId(int id) {
 		this.id = id;
 	}
-	public int getCpf() {
+	public String getCpf() {
 		return cpf;
 	}
-	public void setCpf(int cpf) {
+	public void setCpf(String cpf) {
 		this.cpf = cpf;
 	}
-	public String getName() {
-		return name;
+	public String getNome() {
+		return nome;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 	public int getIdade() {
 		return idade;
@@ -32,11 +43,11 @@ public class Dono {
 	public void setIdade(int idade) {
 		this.idade = idade;
 	}
-	public int getNumeroCel() {
-		return numeroCel;
+	public String getTelefone() {
+		return telefone;
 	}
-	public void setNumeroCel(int numeroCel) {
-		this.numeroCel = numeroCel;
+	public void setTelefone(String numeroCel) {
+		this.telefone = numeroCel;
 	}
 	
 }

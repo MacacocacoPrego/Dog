@@ -11,6 +11,16 @@ public class Hospedar {
 	Date saida;
 	float valor;
 	
+	public Hospedar() {
+		
+	}
+	
+	public Hospedar(int idDono, int idCachorro, float valor) {
+		this.idDono = idDono;
+		this.idCachorro = idCachorro;
+		this.valor = valor;
+	}
+	
 	public int getId() {
 		return id;
 	}
